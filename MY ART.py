@@ -1,49 +1,238 @@
+from turtle import *
 
-import turtle
-from turtle import*
-window = turtle.Screen()
-window.tracer(False)
-window.bgcolor("white")
+window = Screen()
+window.bgcolor("pink")
 
-pixel = Turtle()
-pixel.speed(0) 
+tom = Turtle()
+tom.speed(0)
+tom.width(1)
+tom.pu()
+tom.goto(-300, -300)
+tom.pd()
+window.tracer(50)
 
 
-pixel_size = 20
+def redsquare():
+    tom.begin_fill()
+    tom.fillcolor('red')  
+    tom.color('red')
+    for _ in range(4):
+        tom.fd(25)
+        tom.lt(90)
+    tom.end_fill()
+def whitesquare():
+    tom.begin_fill()
+    tom.color('white') 
+    for i in range(4):
+        tom.fd(25)
+        tom.lt(90)
+    tom.end_fill()
+
+def bluesquare():
+    tom.begin_fill()
+    tom.color('#156fb6') 
+    for i in range(4):
+        tom.fd(25)
+        tom.lt(90)
+    tom.end_fill()
+
+def skinsquare():
+    tom.begin_fill()
+    tom.color('#f8b133')  
+    for i in range(4):
+        tom.fd(25)
+        tom.lt(90)
+    tom.end_fill()
+
+def blacksquare():
+    tom.begin_fill()
+    tom.color('black')
+    for i in range(4):
+        tom.fd(25)
+        tom.lt(90)
+    tom.end_fill()
 
 
-def draw_pixel(x, y, color):
-    pixel.penup()
-    pixel.goto(x, y)
-    pixel.pendown()
-    pixel.begin_fill()
-    pixel.color(color)
-    for _ in range(4): 
-        pixel.forward(pixel_size)
-        pixel.left(90)
-    pixel.end_fill()
+for i in range(10):
+    blacksquare()
+    tom.pu()
+    tom.fd(25) 
+    tom.pd()
+tom.rt(90)
+tom.fd(25)
+tom.lt(90)
 
-image = [
-    [1, 2, 2, 1, 1, 2, 2, 1, 1, 1],
-    [1, 2, 2, 2, 2, 2, 2, 2, 1, 1],
-    [1, 1, 2, 2, 2, 2, 2, 1, 1, 1],
-    [1, 1, 1, 2, 2, 2, 1, 1, 1, 1],
-    [1, 1, 1, 1, 2, 1, 1, 1, 1, 1],
-    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    [2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
-    [2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
-    [2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
-]
+for i in range(9):
+    blacksquare()
+    tom.pu()
+    tom.fd(25) 
+    tom.pd()
+tom.lt(90)
+for i in range(2):
+    blacksquare()
+    tom.pu()
+    tom.fd(25) 
+    tom.pd()
+tom.lt(90)
+tom.fd(25)
 
-for y in range(len(image)):
-    for x in range(len(image[y])):
-        if image[y][x] == 1:
-            draw_pixel(x * pixel_size - 100, 100 - y * pixel_size, "blue")  
-        elif image[y][x] == 2:
-            draw_pixel(x * pixel_size - 100, 100 - y * pixel_size, "black")  
+for i in range(3):
+    redsquare()
+    tom.pu()
+    tom.fd(25) 
+    tom.pd()
+tom.back(50)
+tom.rt(90)
+for i in range(1):
+    redsquare()
+    tom.pu()
+    tom.fd(25) 
+    tom.pd()
+tom.lt(90)
+tom.fd(25)
+for i in range(2):
+    whitesquare()
+    tom.pu()
+    tom.fd(25) 
+    tom.pd()
+tom.lt(90)
+tom.fd(25)
+tom.rt(90)
+tom.back(25)
+for i in range(2):
+    whitesquare()
+    tom.pu()
+    tom.fd(25) 
+    tom.pd()
+for i in range(3):
+    redsquare()
+    tom.pu()
+    tom.fd(25) 
+    tom.pd()
+tom.back(100)
+tom.rt(90)
+tom.fd(25)
+tom.lt(90)
+for i in range(4):
+    redsquare()
+    tom.pu()
+    tom.fd(25) 
+    tom.pd()
+for i in range(1):
+    blacksquare()
+    tom.pu()
+    tom.fd(25) 
+    tom.pd()
+for i in range(2):
+    redsquare()
+    tom.pu()
+    tom.fd(25) 
+    tom.pd()
+for i in range(2):
+    whitesquare()
+    tom.pu()
+    tom.fd(25) 
+    tom.pd()
+for i in range(4):
+    redsquare()
+    tom.pu()
+    tom.fd(25) 
+    tom.pd()
+for i in range(1):
+    blacksquare()
+    tom.pu()
+    tom.fd(25) 
+    tom.pd()
+tom.lt(90)
+tom.fd(25)
+tom.rt(90)
+tom.pu()
+tom.back(450)
+tom.pd()
+tom.rt(90)
+tom.fd(25)
+tom.lt(90)
+for i in range(1):
+    blacksquare()
+    tom.pu()
+    tom.fd(25) 
+    tom.pd()
+tom.rt(90)
+tom.fd(25)
+tom.lt(90)
+for i in range(2):
+    blacksquare()
+    tom.pu()
+    tom.fd(25) 
+    tom.pd()
+for i in range(4):
+    redsquare()
+    tom.pu()
+    tom.fd(25) 
+    tom.pd()
+for i in range(2):
+    blacksquare()
+    tom.pu()
+    tom.fd(25) 
+    tom.pd()
+for i in range(3):
+    redsquare()
+    tom.pu()
+    tom.fd(25) 
+    tom.pd()
+whitesquare()
+tom.pu()
+tom.fd(25) 
+tom.pd()
+for i in range(2):
+    redsquare()
+    tom.pu()
+    tom.fd(25) 
+    tom.pd()
+for i in range(3):
+    blacksquare()
+    tom.pu()
+    tom.fd(25) 
+    tom.pd()
+tom.back(375)
+tom.rt(90)
+tom.fd(25)
+tom.lt(90)
+for i in range(4):
+    blacksquare()
+    tom.pu()
+    tom.fd(25) 
+    tom.pd()
+for i in range(1):
+    bluesquare()
+    tom.pu()
+    tom.fd(25) 
+    tom.pd()
+for i in range(2):
+    blacksquare()
+    tom.pu()
+    tom.fd(25) 
+    tom.pd()
+for i in range(2):
+    redsquare()
+    tom.pu()
+    tom.fd(25) 
+    tom.pd()
+for i in range(4):
+    blacksquare()
+    tom.pu()
+    tom.fd(25) 
+    tom.pd()
+tom.back(250)
+tom.rt(90)
+tom.fd(25)
+tom.lt(90)
+for i in range(1):
+    bluesquare()
+    tom.pu()
+    tom.fd(25) 
+    tom.pd()
 
-pixel.hideturtle()
-window.tracer(True)
-turtle.exitonclick()
+update()
 done()
-
+window.mainloop()
